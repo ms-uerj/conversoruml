@@ -3,6 +3,10 @@ import java.util.*;
 public class ParsingModel implements ParsingModelInterface {
 	ArrayList parsingObservers = new ArrayList();
 	
+	
+	public void initialize(){
+		/*inicialização do model*/
+	}
 	public void registerObserver(ParsingObserver o){
 		parsingObservers.add(o);
 	}

@@ -1,4 +1,4 @@
-Breve resumo sobre o projeto
+Resumo do projeto
 
 = Introdução =
 

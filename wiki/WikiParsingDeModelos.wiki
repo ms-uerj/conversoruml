@@ -1,4 +1,4 @@
-Resumo do projeto
+_Resumo do projeto_
 
 = Introdução =
 

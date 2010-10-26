@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
-
 import javax.swing.*;
 
 public class ParsingView implements ActionListener,  ParsingObserver{
@@ -16,6 +15,7 @@ public class ParsingView implements ActionListener,  ParsingObserver{
 	JButton fileConverterButton;
 	JFileChooser parsingFileChooser;
 	File file;
+	String extension;
 	
 	public ParsingView(ControllerInterface controller, ParsingModelInterface model){
 		this.controller = controller;
@@ -58,12 +58,26 @@ public class ParsingView implements ActionListener,  ParsingObserver{
 		 * respectivas funções no controller
 		 */
 		if(event.getSource() == fileChooserButton){
-			fileConverterButton.setEnabled(true);
 			int returnVal = parsingFileChooser.showOpenDialog(viewFrame);
 			
 			if(returnVal == JFileChooser.APPROVE_OPTION){
 				file = parsingFileChooser.getSelectedFile();
-				pathTextField.setText(file.getAbsolutePath().toString());
+				extension = Utils.getExtension(file);
+				if(extension.equals("uml") || extension.equals("xmi")){
+					pathTextField.setText(file.getAbsolutePath().toString());
+					fileConverterButton.setEnabled(true);
+				}else{
+					pathTextField.setText("Tipo de arquivo não suportado");
+					fileConverterButton.setEnabled(false);
+				}
+			}
+		}
+		if(event.getSource() == fileConverterButton){
+			if(extension.equals("uml")){
+				controller.umlToXmi(file);
+			}else
+			if(extension.equals("xmi")){
+				controller.xmiToUml(file);
 			}
 		}
 	}

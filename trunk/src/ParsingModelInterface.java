@@ -1,3 +1,5 @@
+import java.io.File;
+
 
 public interface ParsingModelInterface {
 	
@@ -6,4 +8,8 @@ public interface ParsingModelInterface {
 	void initialize();
 	void registerObserver(ParsingObserver o);
 	void removeObserver(ParsingObserver o);
+	
+	/* Estes métodos são responsáveis pela conversão */
+	void umlToXmi(File file);
+	void xmiToUml(File file);
 }

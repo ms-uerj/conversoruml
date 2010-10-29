@@ -1,4 +1,3 @@
-import java.io.File;
 import java.util.*;
 
 public class ParsingModel implements ParsingModelInterface {
@@ -17,14 +16,6 @@ public class ParsingModel implements ParsingModelInterface {
 		if(i >= 0 ){
 			parsingObservers.remove(i);
 		}
-	}
-	
-	public void umlToXmi(File file){
-
-	}
-	
-	public void xmiToUml(File file){
-
 	}
 	
 	

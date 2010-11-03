@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
-	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
-	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
-		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_80031D7F_3CA1_405a_971D_42BEFCF17331" name="Model" visibility="public">
-			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_4F364CA5_3F08_4210_A1E4_8AAAA41D5139" name="Class Model" visibility="public">
-				<packagedElement xmi:type="uml:Class" xmi:id="EAID_86ABE1B4_F69E_4315_8231_EF61CF9F06CD" name="Class1" visibility="public">
-					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_9593B0B3_4F88_4a9b_B525_FD7979170FDB" name="atrib1" visibility="private" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_4F88_4a9b_B525_FD7979170FDB" value="1"/>
-						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000002_4F88_4a9b_B525_FD7979170FDB" value="1"/>
-						<type xmi:idref="EAJava_int"/>
-					</ownedAttribute>
-				</packagedElement>
-			</packagedElement>
-		</packagedElement>
-	</uml:Model>
-	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+<uml:Model xmi:version="2.1" xmi:id="_zv37QN7mEd-oHKAY1dg54A">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6uH_cd7pEd-9r-9AFaL-Dg" name="int"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FpEKYN7nEd-oHKAY1dg54A" name="Classe1">
+    <ownedAttribute xmi:id="_jt4B0N7nEd-oHKAY1dg54A" name="atrib1" type="_6uH_cd7pEd-9r-9AFaL-Dg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXOV8N7qEd-9r-9AFaL-Dg"/>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>
+<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
 		<diagrams>
 			<diagram xmi:id="EAID_1DF1E2C5_01C9_46b5_A7D0_696ECD907BED">
 				<model package="EAPK_4F364CA5_3F08_4210_A1E4_8AAAA41D5139" localID="12" owner="EAPK_4F364CA5_3F08_4210_A1E4_8AAAA41D5139"/>
@@ -30,5 +24,5 @@
 				</elements>
 			</diagram>
 		</diagrams>
-	</xmi:Extension>
+</xmi:Extension>
 </xmi:XMI>

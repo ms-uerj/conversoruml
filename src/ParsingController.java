@@ -11,11 +11,12 @@ public class ParsingController implements ControllerInterface {
 		model.initialize();
 	}
 	
-	public void umlToXmi(File file){
-		model.umlToXmi(file);
+	public void umlToXmi(File file, File directory){
+		model.umlToXmi(file, directory);
 	}
 	
-	public void xmiToUml(File file){
-		model.xmiToUml(file);
+	public void xmiToUml(File file, File directory){
+		Boolean t = model.xmiToUml(file, directory);
+		view.updateParsing(t);
 	}
 }

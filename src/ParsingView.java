@@ -10,11 +10,17 @@ public class ParsingView implements ActionListener,  ParsingObserver{
 	JFrame viewFrame;
 	JPanel viewPanel;
 	JLabel parsingInstructionLabel;
+	JLabel directoryInstructionLabel;
 	JTextField pathTextField;
+	JTextField directoryTextField;
 	JButton fileChooserButton;
+	JButton directoryChooserButton;
 	JButton fileConverterButton;
 	JFileChooser parsingFileChooser;
+	JFileChooser parsingDirectoryChooser;
+	JOptionPane dialog;
 	File file;
+	File directory;
 	String extension;
 	
 	public ParsingView(ControllerInterface controller, ParsingModelInterface model){
@@ -30,14 +36,19 @@ public class ParsingView implements ActionListener,  ParsingObserver{
 		viewFrame = new JFrame("Parsing");
 		viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		viewFrame.setResizable(false);
-		//viewFrame.pack();
-		viewFrame.setSize(new Dimension(500, 100));
+		viewFrame.setSize(new Dimension(500, 130));
 		
 		parsingInstructionLabel = new JLabel("Arquivo de entrada:", SwingConstants.CENTER);
+		directoryInstructionLabel = new JLabel("Diretório de saída:", SwingConstants.CENTER);
 		parsingFileChooser = new JFileChooser();
+		parsingDirectoryChooser = new JFileChooser();
+		parsingDirectoryChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		pathTextField = new JTextField("",25);
+		directoryTextField = new JTextField("",25);
 		fileChooserButton = new JButton("Abrir");
 		fileChooserButton.addActionListener(this);
+		directoryChooserButton = new JButton("Abrir");
+		directoryChooserButton.addActionListener(this);
 		fileConverterButton = new JButton("Converter");
 		fileConverterButton.addActionListener(this);
 		fileConverterButton.setEnabled(false);
@@ -46,6 +57,9 @@ public class ParsingView implements ActionListener,  ParsingObserver{
 		viewPanel.add(parsingInstructionLabel);
 		viewPanel.add(pathTextField);
 		viewPanel.add(fileChooserButton);
+		viewPanel.add(directoryInstructionLabel);
+		viewPanel.add(directoryTextField);
+		viewPanel.add(directoryChooserButton);
 		viewPanel.add(fileConverterButton);
 		
 		viewFrame.add(viewPanel);
@@ -74,15 +88,31 @@ public class ParsingView implements ActionListener,  ParsingObserver{
 		}
 		if(event.getSource() == fileConverterButton){
 			if(extension.equals("uml")){
-				controller.umlToXmi(file);
+				controller.umlToXmi(file,directory);
 			}else
 			if(extension.equals("xmi")){
-				controller.xmiToUml(file);
+				controller.xmiToUml(file,directory);
+			}
+		}
+		if(event.getSource() == directoryChooserButton){
+			int returnVal = parsingDirectoryChooser.showOpenDialog(viewFrame);
+			
+			if(returnVal == JFileChooser.APPROVE_OPTION){
+				directory = parsingDirectoryChooser.getSelectedFile();
+				directoryTextField.setText(directory.getAbsolutePath().toString());
 			}
 		}
 	}
 	
-	public void updateParsing(){
-		/* Fazer algo */
+	public void updateParsing(boolean t){
+		if(t == true){
+			JOptionPane.showMessageDialog(null, "Convertido com sucesso","Alert",JOptionPane.INFORMATION_MESSAGE);
+			pathTextField.setText("");
+			directoryTextField.setText("");
+		}else{
+			JOptionPane.showMessageDialog(null, "Erro ao converter","Alert",JOptionPane.ERROR_MESSAGE);
+			pathTextField.setText("");
+			directoryTextField.setText("");
+		}
 	}
 }

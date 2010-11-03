@@ -24,11 +24,11 @@ public class ParsingModel implements ParsingModelInterface {
 		}
 	}
 	
-	public void umlToXmi(File file){
+	public void umlToXmi(File file, File directory){
 
 	}
 	
-	public void xmiToUml(File file){
+	public boolean xmiToUml(File file, File directory){
 		Element umlModel = new Element("Model","uml","http://www.eclipse.org/uml2/3.0.0/UML");
 		Element packagedElement = new Element("packagedElement");
 		Element packagedElement2 = new Element("packagedElement");
@@ -65,13 +65,13 @@ public class ParsingModel implements ParsingModelInterface {
 		
 		XMLOutputter xout = new XMLOutputter();
 		try{
-			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("diagrama.uml"), "UTF8")); 
+			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(directory.getAbsolutePath().toString().concat("/diagrama.uml")), "UTF8")); 
 			xout.output(doc, out);
+			return true;
 		}catch(Exception e){
 			e.printStackTrace();
-		}
-		
-		
+			return false;
+		}	
 	}
 	
 	

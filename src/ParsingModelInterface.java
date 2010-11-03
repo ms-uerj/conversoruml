@@ -10,6 +10,6 @@ public interface ParsingModelInterface {
 	void removeObserver(ParsingObserver o);
 	
 	/* Estes métodos são responsáveis pela conversão */
-	void umlToXmi(File file);
-	void xmiToUml(File file);
+	void umlToXmi(File file, File directory);
+	boolean xmiToUml(File file, File directory);
 }

@@ -1,4 +1,4 @@
 
 public interface ParsingObserver {
-	void updateParsing();
+	void updateParsing(boolean t);
 }

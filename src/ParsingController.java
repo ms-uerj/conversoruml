@@ -15,7 +15,7 @@ public class ParsingController implements ControllerInterface {
 		model.umlToXmi(file, directory);
 	}
 	
-	public void xmiToUml(File file, File directory){
+	public void xmiToUml(File file, File directory) throws Exception{
 		Boolean t = model.xmiToUml(file, directory);
 		view.updateParsing(t);
 	}

@@ -91,7 +91,12 @@ public class ParsingView implements ActionListener,  ParsingObserver{
 				controller.umlToXmi(file,directory);
 			}else
 			if(extension.equals("xmi")){
-				controller.xmiToUml(file,directory);
+				try {
+					controller.xmiToUml(file,directory);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 		if(event.getSource() == directoryChooserButton){

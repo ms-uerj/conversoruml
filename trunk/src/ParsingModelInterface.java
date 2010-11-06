@@ -11,5 +11,5 @@ public interface ParsingModelInterface {
 	
 	/* Estes métodos são responsáveis pela conversão */
 	void umlToXmi(File file, File directory);
-	boolean xmiToUml(File file, File directory);
+	boolean xmiToUml(File file, File directory)throws Exception;
 }

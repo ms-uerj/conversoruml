@@ -24,8 +24,18 @@ public class ParsingModel implements ParsingModelInterface {
 		}
 	}
 	
-	public void umlToXmi(File file, File directory){
-
+	public boolean umlToXmi(File file, File directory)throws Exception{
+		// Cria a instancia da Classe para mostrar o arquivo.  
+	    XslParser xslParser = new XslParser("C://umlToxmi.xsl");
+	    
+	    SAXBuilder sb = new SAXBuilder();  
+	    
+	    //Este documento agora possui toda a estrutura do arquivo.  
+	    Document doc = sb.build(file);
+	   
+	    // Chamada da função que criar a transformacao de XML para HTML.  
+	    xslParser.parserFile(doc, new PrintStream(directory.getAbsolutePath().concat("/diagrama.xmi")));
+	    return true;
 	}
 	
 	public boolean xmiToUml(File file, File directory) throws Exception{

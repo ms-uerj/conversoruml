@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_zv37QN7mEd-oHKAY1dg54A">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6uH_cd7pEd-9r-9AFaL-Dg" name="int"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FpEKYN7nEd-oHKAY1dg54A" name="Classe1">
+    <ownedAttribute xmi:id="_jt4B0N7nEd-oHKAY1dg54A" name="atrib1" type="_6uH_cd7pEd-9r-9AFaL-Dg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXOV8N7qEd-9r-9AFaL-Dg"/>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>

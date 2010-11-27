@@ -9,11 +9,10 @@
 <xsl:template name="model">
 	<xsl:for-each select="/xmi:XMI/uml:Model">
 		<xsl:copy>
-				<xsl:apply-templates select="@*|node()"/>
+				<xsl:apply-templates select="@* | node()"/>
 		</xsl:copy>
 	</xsl:for-each>
-</xsl:template>
-
+</xsl:template> 
 
 <xsl:template match="type" >
 	<xsl:if test="@xmi:idref='EAJava_int'">
@@ -25,6 +24,12 @@
 	<xsl:if test="@xmi:idref='EAJava_boolean'">
 		<type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
 	</xsl:if>
+</xsl:template>
+
+<xsl:template match="ownedParameter" >
+	<xsl:if test="@type='EAJava_void'">
+    	<ownedParameter direction="return" name="return" xmi:id="EAID_RT000000_072E_4953_B303_6E18D12614FE"/>
+    </xsl:if>
 </xsl:template>
 
 <xsl:template match="body" />

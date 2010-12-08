@@ -33,7 +33,6 @@ public class ParsingModel implements ParsingModelInterface {
 	    //Este documento agora possui toda a estrutura do arquivo.  
 	    Document doc = sb.build(file);
 	   
-	    // Chamada da função que criar a transformacao de XML para HTML.  
 	    xslParser.parserFile(doc, new PrintStream(directory.getAbsolutePath().concat("/diagrama.xmi")));
 	    return true;
 	}
@@ -46,9 +45,20 @@ public class ParsingModel implements ParsingModelInterface {
 	    
 	    //Este documento agora possui toda a estrutura do arquivo.  
 	    Document doc = sb.build(file);
-	   
-	    // Chamada da função que criar a transformacao de XML para HTML.  
+	    
 	    xslParser.parserFile(doc, new PrintStream(directory.getAbsolutePath().concat("/diagrama.uml")));
+	    
+	    //Substituir o namespace 
+	    File f = new File(directory.getAbsolutePath().concat("/diagrama.uml"));
+ 	    BufferedReader reader = new BufferedReader(new FileReader(f));
+ 	    String line = "", oldtext = "";
+ 	    while((line = reader.readLine()) != null){
+ 		   oldtext += line + "\r\n";
+ 	    }
+ 	    reader.close();
+ 	    String newtext = oldtext.replaceAll("http://schema.omg.org/spec/UML/2.1", "http://www.eclipse.org/uml2/3.0.0/UML");
+ 	    FileWriter writer = new FileWriter(directory.getAbsolutePath().concat("/diagrama.uml"));
+ 	    writer.write(newtext);writer.close();
 	    return true;
 	}
 	

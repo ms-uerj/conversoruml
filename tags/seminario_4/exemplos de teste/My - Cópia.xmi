@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+<uml:Model xmi:version="2.1" xmi:id="_zv37QN7mEd-oHKAY1dg54A">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6uH_cd7pEd-9r-9AFaL-Dg" name="int"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FpEKYN7nEd-oHKAY1dg54A" name="Classe1">
+    <ownedAttribute xmi:id="_jt4B0N7nEd-oHKAY1dg54A" name="atrib1" type="_6uH_cd7pEd-9r-9AFaL-Dg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXOV8N7qEd-9r-9AFaL-Dg"/>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>
+<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<diagrams>
+			<diagram xmi:id="EAID_1DF1E2C5_01C9_46b5_A7D0_696ECD907BED">
+				<model package="EAPK_4F364CA5_3F08_4210_A1E4_8AAAA41D5139" localID="12" owner="EAPK_4F364CA5_3F08_4210_A1E4_8AAAA41D5139"/>
+				<properties name="teste" type="Logical"/>
+				<project author="casa" version="1.0" created="2010-10-26 05:45:56" modified="2010-10-26 05:51:05"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=803;DocSize.cy=1110;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;width=1;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=306;Top=223;Right=396;Bottom=293;" subject="EAID_86ABE1B4_F69E_4315_8231_EF61CF9F06CD" seqno="1" style="DUID=9298A2CC;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+</xmi:Extension>
+</xmi:XMI>
